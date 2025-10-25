@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // worker の entry point
+  "main": ".open-next/worker.js",
+  // project name
+  "name": "recette",
+  // cloudflare workers の js runtimeのバージョン指定（open nextの要件に合わせている)
+  "compatibility_date": "2024-12-30",
+  // worker runtime環境起動時に使うflagの指定
+  "compatibility_flags": [
+    "nodejs_compat",  // node.js互換モード有効化
+    "global_fetch_strictly_public", // local環境へのfetchアクセス禁止
+  ],
+  // static assetsの設定
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS" // open nextがworker内でstatic assetsにアクセスするためのbinding名
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "recette"
+    }
+  ]
+}
