@@ -1,14 +1,7 @@
 {
   "permissions": {
-    "allow": [
-      "WebSearch(*)",
-      "Bash(npm install:*)"
-    ],
-    "deny": [
-      "Read(.env)",
-      "Edit(.env)",
-      "Edit(node_modules/**)"
-    ],
+    "allow": ["WebSearch(*)", "Bash(npm install:*)", "Bash(npm run lint:*)"],
+    "deny": ["Read(.env)", "Edit(.env)", "Edit(node_modules/**)"],
     "ask": []
   }
 }

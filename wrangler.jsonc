@@ -8,8 +8,8 @@
   "compatibility_date": "2024-12-30",
   // worker runtime環境起動時に使うflagの指定
   "compatibility_flags": [
-    "nodejs_compat",  // node.js互換モード有効化
-    "global_fetch_strictly_public", // local環境へのfetchアクセス禁止
+    "nodejs_compat", // node.js互換モード有効化
+    "global_fetch_strictly_public" // local環境へのfetchアクセス禁止
   ],
   // static assetsの設定
   "assets": {
