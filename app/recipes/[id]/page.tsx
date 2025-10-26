@@ -9,25 +9,13 @@ import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { mockRecipes } from "@/data/mock-recipes";
 import type { Recipe } from "@/types/recipe";
 
 async function getRecipe(id: string): Promise<Recipe | null> {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-
-  try {
-    const res = await fetch(`${baseUrl}/api/recipes/${id}`, {
-      next: { revalidate: 60 },
-    });
-
-    if (!res.ok) {
-      return null;
-    }
-
-    return res.json();
-  } catch (error) {
-    console.error("Error fetching recipe:", error);
-    return null;
-  }
+  // サーバーコンポーネントなので、直接データを取得する
+  const recipe = mockRecipes.find((r) => r.id === id);
+  return recipe || null;
 }
 
 export default async function RecipeDetailPage({
