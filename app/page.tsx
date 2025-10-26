@@ -4,9 +4,13 @@ import Typography from "@mui/material/Typography";
 import RecipeListWithFilter from "@/components/recipe-list-with-filter";
 import { mockRecipes } from "@/data/mock-recipes";
 
+/**
+ * Server Component: Home Page
+ * @returns 
+ */
 export default async function Home() {
   // サーバーコンポーネントなので、直接データを取得
-  const recipes = mockRecipes;
+  const recipes = await getLatestRecipes();
 
   return (
     <Container maxWidth="xl" sx={{ py: 4 }}>
@@ -28,3 +32,13 @@ export default async function Home() {
     </Container>
   );
 }
+
+/**
+ * 初期画面のデータを取得する
+ * server componentなので、直接データを取得する
+ * @returns 
+ */
+const getLatestRecipes = async () => {
+  // 実際のアプリでは、ここでデータベースやAPIからデータを取得する
+  return mockRecipes;
+};
