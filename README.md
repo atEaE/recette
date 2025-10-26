@@ -13,11 +13,6 @@ npm run dev
 
 [http://localhost:3000](http://localhost:3000) にアクセスしてください。
 
-
-## 実装ロードマップ
-
-実装済み内容や、今後の実装予定については[docs/roadmap.md](./docs/roadmap.md)を参照してください。
-
 ## システム・アーキテクチャ
 
 - Framework: Next.js(v16)
@@ -31,6 +26,14 @@ npm run dev
   - https://github.com/opennextjs/opennextjs-cloudflare
   - Next.js アプリケーションを Cloudflare にデプロイできるようにするためのアダプター
   - `@cloudflare/next-on-pages`がサポート終了しているため、こちらを採用
+
+## 機能仕様
+
+機能仕様については[docs/spec.md](./docs/spec.md)を参照してください。
+
+## 実装ロードマップ
+
+実装済み内容や、今後の実装予定については[docs/roadmap.md](./docs/roadmap.md)を参照してください。
 
 ## 参考資料
 
