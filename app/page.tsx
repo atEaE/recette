@@ -1,32 +1,12 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
-import RecipeCard from "@/components/recipe-card";
-import type { Recipe } from "@/types/recipe";
-
-async function getRecipes(): Promise<Recipe[]> {
-  // 開発環境とプロダクション環境で動作するようにベースURLを構築
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-
-  try {
-    const res = await fetch(`${baseUrl}/api/recipes`, {
-      // Next.jsのキャッシュ設定
-      next: { revalidate: 60 }, // 60秒ごとに再検証
-    });
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch recipes");
-    }
-
-    return res.json();
-  } catch (error) {
-    console.error("Error fetching recipes:", error);
-    return [];
-  }
-}
+import RecipeListWithFilter from "@/components/recipe-list-with-filter";
+import { mockRecipes } from "@/data/mock-recipes";
 
 export default async function Home() {
-  const recipes = await getRecipes();
+  // サーバーコンポーネントなので、直接データを取得
+  const recipes = mockRecipes;
 
   return (
     <Container maxWidth="xl" sx={{ py: 4 }}>
@@ -44,21 +24,7 @@ export default async function Home() {
           お気に入りのレシピを見つけて、料理を楽しみましょう
         </Typography>
       </Box>
-      <Box
-        sx={{
-          display: "grid",
-          gridTemplateColumns: {
-            xs: "repeat(1, 1fr)",
-            sm: "repeat(2, 1fr)",
-            md: "repeat(3, 1fr)",
-          },
-          gap: 3,
-        }}
-      >
-        {recipes.map((recipe) => (
-          <RecipeCard key={recipe.id} recipe={recipe} />
-        ))}
-      </Box>
+      <RecipeListWithFilter recipes={recipes} />
     </Container>
   );
 }
