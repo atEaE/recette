@@ -1,15 +1,15 @@
 "use client";
 
-import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import Chip from "@mui/material/Chip";
-import Box from "@mui/material/Box";
-import { Recipe } from "@/types/recipe";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import PeopleIcon from "@mui/icons-material/People";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Chip from "@mui/material/Chip";
+import Typography from "@mui/material/Typography";
 import Link from "next/link";
+import type { Recipe } from "@/types/recipe";
 
 interface RecipeCardProps {
   recipe: Recipe;

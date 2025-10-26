@@ -1,11 +1,12 @@
-import { Recipe } from "@/types/recipe";
+import type { Recipe } from "@/types/recipe";
 
 export const mockRecipes: Recipe[] = [
   {
     id: "1",
     title: "カルボナーラ",
     description: "濃厚でクリーミーなイタリアン定番パスタ",
-    imageUrl: "https://images.unsplash.com/photo-1612874742237-6526221588e3?w=800&h=600&fit=crop",
+    imageUrl:
+      "https://images.unsplash.com/photo-1612874742237-6526221588e3?w=800&h=600&fit=crop",
     categories: ["イタリアン", "パスタ"],
     tags: ["簡単", "人気", "クリーミー"],
     ingredients: [
@@ -30,7 +31,8 @@ export const mockRecipes: Recipe[] = [
     id: "2",
     title: "チキンカレー",
     description: "スパイシーで美味しい定番カレー",
-    imageUrl: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=800&h=600&fit=crop",
+    imageUrl:
+      "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=800&h=600&fit=crop",
     categories: ["カレー", "インド料理"],
     tags: ["スパイシー", "メイン", "定番"],
     ingredients: [
@@ -56,7 +58,8 @@ export const mockRecipes: Recipe[] = [
     id: "3",
     title: "寿司ロール",
     description: "新鮮なサーモンと野菜を使った寿司ロール",
-    imageUrl: "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop",
+    imageUrl:
+      "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=600&fit=crop",
     categories: ["和食", "寿司"],
     tags: ["ヘルシー", "パーティー", "海鮮"],
     ingredients: [
@@ -81,7 +84,8 @@ export const mockRecipes: Recipe[] = [
     id: "4",
     title: "フレンチトースト",
     description: "ふわふわの朝食にぴったりのフレンチトースト",
-    imageUrl: "https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=800&h=600&fit=crop",
+    imageUrl:
+      "https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=800&h=600&fit=crop",
     categories: ["朝食", "デザート"],
     tags: ["簡単", "甘い", "朝食"],
     ingredients: [
@@ -106,7 +110,8 @@ export const mockRecipes: Recipe[] = [
     id: "5",
     title: "タコス",
     description: "メキシカンな味わいのタコス",
-    imageUrl: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&h=600&fit=crop",
+    imageUrl:
+      "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&h=600&fit=crop",
     categories: ["メキシコ料理"],
     tags: ["パーティー", "スパイシー", "手軽"],
     ingredients: [
@@ -131,7 +136,8 @@ export const mockRecipes: Recipe[] = [
     id: "6",
     title: "味噌ラーメン",
     description: "濃厚な味噌スープのラーメン",
-    imageUrl: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop",
+    imageUrl:
+      "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&h=600&fit=crop",
     categories: ["ラーメン", "和食"],
     tags: ["麺類", "濃厚", "人気"],
     ingredients: [

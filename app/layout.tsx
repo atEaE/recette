@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import ThemeRegistry from "@/components/ThemeRegistry";
+import ThemeRegistry from "@/components/theme-registry";
 import "./globals.css";
+import { CONST } from "./constants";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Recette - レシピ管理アプリ",
-  description: "お気に入りのレシピを登録・管理できるPWAアプリ",
+  title: CONST.APP_NAME,
+  description: CONST.APP_DESCRIPTION,
 };
 
 export default function RootLayout({
