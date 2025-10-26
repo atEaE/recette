@@ -8,6 +8,15 @@ initOpenNextCloudflareForDev();
 const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
+  images: {
+    remotePatterns: [
+      // 外部画像を使っているので、そのドメインを許可する設定
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
