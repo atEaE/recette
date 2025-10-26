@@ -12,11 +12,15 @@
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "upload": "opennextjs-cloudflare build && opennextjs-cloudflare upload",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "db:shell": "turso db shell recette-db",
+    "db:list": "turso db list",
+    "db:show": "turso db show recette-db"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@libsql/client": "^0.15.15",
     "@mui/icons-material": "^7.3.4",
     "@mui/material": "^7.3.4",
     "@opennextjs/cloudflare": "^1.11.0",
