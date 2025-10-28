@@ -6,7 +6,7 @@ import { mockRecipes } from "@/data/mock-recipes";
 
 /**
  * Server Component: Home Page
- * @returns 
+ * @returns
  */
 export default async function Home() {
   // サーバーコンポーネントなので、直接データを取得
@@ -36,7 +36,7 @@ export default async function Home() {
 /**
  * 初期画面のデータを取得する
  * server componentなので、直接データを取得する
- * @returns 
+ * @returns
  */
 const getLatestRecipes = async () => {
   // 実際のアプリでは、ここでデータベースやAPIからデータを取得する

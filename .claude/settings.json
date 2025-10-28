@@ -7,7 +7,12 @@
       "Bash(npm run preview:*)",
       "Bash(npm run build:*)"
     ],
-    "deny": ["Read(.env)", "Edit(.env)", "Edit(node_modules/**)"],
+    "deny": [
+      "Read(.env)",
+      "Edit(.env)",
+      "Read(.local)",
+      "Edit(node_modules/**)"
+    ],
     "ask": []
   }
 }
